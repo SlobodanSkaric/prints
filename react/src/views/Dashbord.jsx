@@ -17,33 +17,76 @@ export default function Dashbord() {
                     </div>
                     <div className='w-full overflow-y-scroll pb-7 h-80 text-center'>
                         <ul>
-                            <li>123456711</li>
-                            <li>123456711</li>
-                            <li>123456717</li>
-                            <li>123456711</li>
-                            <li>123456711</li>
-                            <li>123456717</li>
-                            <li>123456711</li>
-                            <li>123456711</li>
-                            <li>123456717</li>
-                            <li>123456711</li>
-                            <li>123456711</li>
-                            <li>123456717</li>
-                            <li>123456711</li>
-                            <li>123456711</li>
-                            <li>123456717</li>
-                            <li>123456711</li>
-                            <li>123456711</li>
-                            <li>123456717</li>
-                            <li>123456711</li>
-                            <li>123456711</li>
-                            <li>123456717</li>
-                            <li>123456711</li>
-                            <li>123456711</li>
-                            <li>123456717</li>
-                            <li>123456711</li>
-                            <li>123456711</li>
-                            <li>123456717</li>
+                            <li>
+                                <div className="flex justify-around"> 
+                                    <div className="">
+                                        123456711
+                                    </div>
+                                    <div className="">
+                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="flex justify-around"> 
+                                    <div className="">
+                                        123456711
+                                    </div>
+                                    <div className="">
+                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="flex justify-around"> 
+                                    <div className="">
+                                        123456711
+                                    </div>
+                                    <div className="">
+                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="flex justify-around"> 
+                                    <div className="">
+                                        123456711
+                                    </div>
+                                    <div className="">
+                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="flex justify-around"> 
+                                    <div className="">
+                                        123456711
+                                    </div>
+                                    <div className="">
+                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="flex justify-around"> 
+                                    <div className="">
+                                        123456711
+                                    </div>
+                                    <div className="">
+                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="flex justify-around"> 
+                                    <div className="">
+                                        123456711
+                                    </div>
+                                    <div className="">
+                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -69,64 +112,42 @@ export default function Dashbord() {
                             <tbody>
                                 <tr>
                                     <td>
-                                        348810 - <span>10000 kom</span>
+                                        348810 - <span>10000 kom</span> <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
                                     </td>
                                     <td>
-                                        348810 - <span>10000 kom</span> - <span>27.08.2023</span>
-                                    </td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td>
-                                        348810 - <span>10000 kom</span>
-                                    </td>
-                                    <td>
-                                        348810 - <span>10000 kom</span> - <span>27.08.2023</span>
+                                        348810 - <span>10000 kom</span> - <span>27.08.2023</span> <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
                                     </td>
                                     
                                 </tr>
                                 <tr>
                                     <td>
-                                        327082 - <span>20000 kom</span> 
+                                        348810 - <span>10000 kom</span><button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
                                     </td>
                                     <td>
-                                        327082 - <span>20000 kom</span> - <span>27.08.2023</span>
+                                        348810 - <span>10000 kom</span> - <span>27.08.2023</span><button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        327082 - <span>20000 kom</span> <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
+                                    </td>
+                                    <td>
+                                        327082 - <span>20000 kom</span> - <span>27.08.2023</span><button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        327082 - <span>20000 kom</span> 
+                                        327082 - <span>20000 kom</span> <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
                                     </td>
                                     <td>
-                                        327082 - <span>20000 kom</span> - <span>27.08.2023</span>
+                                        327082 - <span>20000 kom</span> - <span>27.08.2023</span><button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
                                     </td>
                                 </tr>
                                 
                             </tbody>
                                
                         </table>
-                       {/*  <div>
-                            <div className='mb-3'>Materijal Stanje</div>
-                            <div>
-                                <ul>
-                                    <li></li>
-                                    <li>348809 - <span>15000 kom</span></li>
-                                    <li>327082 - <span>20000 kom</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <h1>Isporuka</h1>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>348810 - <span>10000 kom</span> - <span>27.08.2023</span></li>
-                                    <li>348809 - <span>15000 kom</span> - <span>27.08.2023</span></li>
-                                    <li>327082 - <span>20000 kom</span> - <span>27.08.2023</span></li>
-                                </ul>
-                            </div>
-                        </div>  */}
                     </div>
                 </div>
             </div>
