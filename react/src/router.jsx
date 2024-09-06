@@ -6,6 +6,8 @@ import Gusetlayout from "./components/Gusetlayout";
 import Login from "./views/Login";
 import SingUp from "./views/SingUp";
 import Tickets from "./views/Tickets";
+import History from "./views/History";
+import Pass from "./views/Pass";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
             {
                 path:"/tickets",
                 element: <Tickets/>
+            },
+            {
+                path: "/history",
+                element: <History/>
+            },
+            {
+                path:"/pass",
+                element: <Pass/>
             }
         ]
     },
