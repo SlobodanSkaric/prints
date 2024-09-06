@@ -5,6 +5,7 @@ import User from "./views/User";
 import Gusetlayout from "./components/Gusetlayout";
 import Login from "./views/Login";
 import SingUp from "./views/SingUp";
+import Tickets from "./views/Tickets";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: "/user",
                 element: <User/>
+            },
+            {
+                path:"/tickets",
+                element: <Tickets/>
             }
         ]
     },
