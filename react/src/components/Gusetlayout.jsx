@@ -5,7 +5,7 @@ export default function Gusetlayout() {
   return (
     <>
         <div>
-            Guset Layout
+           
         </div>
         <div>
             <main>
