@@ -1,7 +1,13 @@
 import React from 'react'
-import {Outlet} from "react-router-dom";
+import {Navigate, Outlet} from "react-router-dom";
+import { useStateContext } from '../context/ContextProvider';
 
 export default function DefaultLayout() {
+    const {user, token, setToken} = useStateContext();
+
+    if(!token){
+        return <Navigate to="/"/>
+    }
   return (
     <div>
         <div className='flex px-11 py-7 justify-center text-center text-white gap-1'>
