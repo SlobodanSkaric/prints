@@ -4,7 +4,7 @@ import React from 'react';
 export default function Dashbord() {
   return (
     <div className='flex justify-evenly gap-3 m-7 h-full'>
-        <div className='bg-slate-500 text-white py-3 px-10 w-1/3 rounded-xl'>
+        <div className='border border-solid border-neutral-700 py-3 px-10 w-1/3 rounded-xl'>
             <div className='flex'>
                 <div className='text-center w-full'>
                     <div className='mb-5 border-b-2 flex justify-around'>
@@ -18,72 +18,72 @@ export default function Dashbord() {
                     <div className='w-full overflow-y-scroll pb-7 h-80 text-center'>
                         <ul>
                             <li>
-                                <div className="flex justify-around"> 
+                                <div className="flex justify-around">
                                     <div className="">
                                         123456711
                                     </div>
                                     <div className="">
-                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                        <button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div className="flex justify-around"> 
+                                <div className="flex justify-around">
                                     <div className="">
                                         123456711
                                     </div>
                                     <div className="">
-                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                        <button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div className="flex justify-around"> 
+                                <div className="flex justify-around">
                                     <div className="">
                                         123456711
                                     </div>
                                     <div className="">
-                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                        <button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div className="flex justify-around"> 
+                                <div className="flex justify-around">
                                     <div className="">
                                         123456711
                                     </div>
                                     <div className="">
-                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                        <button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div className="flex justify-around"> 
+                                <div className="flex justify-around">
                                     <div className="">
                                         123456711
                                     </div>
                                     <div className="">
-                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                        <button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div className="flex justify-around"> 
+                                <div className="flex justify-around">
                                     <div className="">
                                         123456711
                                     </div>
                                     <div className="">
-                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                        <button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div className="flex justify-around"> 
+                                <div className="flex justify-around">
                                     <div className="">
                                         123456711
                                     </div>
                                     <div className="">
-                                        <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
+                                        <button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </div>
                                 </div>
                             </li>
@@ -93,65 +93,65 @@ export default function Dashbord() {
             </div>
         </div>
 
-        <div className='text-white py-3 px-10 w-1/3 bg-slate-500 rounded-xl flex-1'>
+        <div className='border border-solid border-neutral-700 py-3 px-10 w-1/3  rounded-xl flex-1'>
             < div className='flex'>
                 <div className='text-center w-full'>
                     <div className='text-xl mb-5 border-b-2'>Info</div>
-                    <div className='flex justify-around'> 
-                        <table className='table-auto w-full material'> 
+                    <div className='flex justify-around'>
+                        <table className='table-auto w-full material'>
                             <thead>
                                 <tr>
                                     <td>
                                         Materijal Stanje
-                                    </td>    
+                                    </td>
                                     <td>
                                         Isporuka
-                                    </td>                           
+                                    </td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>
-                                        348810 - <span>10000 kom</span> <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
+                                        348810 - <span>10000 kom</span> <button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </td>
                                     <td>
-                                        348810 - <span>10000 kom</span> - <span>27.08.2023</span> <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
+                                        348810 - <span>10000 kom</span> - <span>27.08.2023</span> <button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </td>
-                                    
+
                                 </tr>
                                 <tr>
                                     <td>
-                                        348810 - <span>10000 kom</span><button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
+                                        348810 - <span>10000 kom</span><button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </td>
                                     <td>
-                                        348810 - <span>10000 kom</span> - <span>27.08.2023</span><button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
+                                        348810 - <span>10000 kom</span> - <span>27.08.2023</span><button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </td>
-                                    
+
                                 </tr>
                                 <tr>
                                     <td>
-                                        327082 - <span>20000 kom</span> <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
+                                        327082 - <span>20000 kom</span> <button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </td>
                                     <td>
-                                        327082 - <span>20000 kom</span> - <span>27.08.2023</span><button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
+                                        327082 - <span>20000 kom</span> - <span>27.08.2023</span><button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        327082 - <span>20000 kom</span> <button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
+                                        327082 - <span>20000 kom</span> <button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </td>
                                     <td>
-                                        327082 - <span>20000 kom</span> - <span>27.08.2023</span><button className="bg-slate-700 w-auto py-1 px-3 mb-3 rounded-xl ml-1">Show</button>
+                                        327082 - <span>20000 kom</span> - <span>27.08.2023</span><button className="border border-solid border-neutral-700 w-auto py-1 px-3 mb-3 rounded-xl">Show</button>
                                     </td>
                                 </tr>
-                                
+
                             </tbody>
-                               
+
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
   )
 }

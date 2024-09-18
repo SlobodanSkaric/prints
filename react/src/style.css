@@ -4,16 +4,16 @@
 }
 
 .material td, .material th {
-    border: 1px solid #ddd;
+    border: 1px solid #8d7a7a;
     padding: 8px;
   }
 
 .material tr:nth-child(even){
-    background-color: #f2f2f2;
+    background-color: #dbe9d7;
     color: rgb(138, 133, 133);
 }
 
 .material thead tr td{
-    background-color: #d8cdcd;
+    background-color: #b4dab1;
     color: rgb(97, 82, 82);
 }
