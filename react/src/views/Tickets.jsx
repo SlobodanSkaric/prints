@@ -4,15 +4,15 @@ export default function Tickets() {
   return (
     <div>
         <div className='flex justify-center'>
-            <h1 className='text-xl'>Nalozi</h1>
+            <h1 className='text-3xl'>Nalozi</h1>
         </div>
         <div className='flex text-center justify-around'>
             <div>
-                <div className='p-3'>
+                <div className='p-3 text-2xl'>
                     Spisak naloga
                 </div>
                 <div className='p-3'>
-                    <table className='border-collapse border-2 '>
+                    <table className='border-collapse border-2 material border-solid border-neutral-700'>
                         <thead>
                             <tr>
                                 <th>Id</th>
@@ -74,9 +74,9 @@ export default function Tickets() {
                             </tr>
                         </tbody>
                     </table>
-                </div>                
+                </div>
             </div>
-            <div className='p-3'>
+            <div className='p-3 text-2xl'>
                     <div>
                         Spisak materijala
                     </div>

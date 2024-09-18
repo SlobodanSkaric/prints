@@ -10,10 +10,10 @@
 
 .material tr:nth-child(even){
     background-color: #dbe9d7;
-    color: rgb(138, 133, 133);
+    color: rgb(106, 47, 47);
 }
 
 .material thead tr td{
     background-color: #b4dab1;
-    color: rgb(97, 82, 82);
+    color: rgb(238, 221, 221);
 }
