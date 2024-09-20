@@ -61,7 +61,7 @@ export default function Pass() {
                 </div>
               </div>
               <div className='text-center py-7'>
-                <button className='hover:bg-green-700  hover:text-slate-100 text-slate-700 border-2 py-3 px-7'>Submit</button>
+                <button className='hover:bg-green-700 hover:text-slate-100 text-slate-700 border-2 py-3 px-7'>Submit</button>
               </div>
             </form>
           </div>
