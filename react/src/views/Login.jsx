@@ -1,12 +1,14 @@
 import React, { useRef } from 'react'
 import { useStateContext } from '../context/ContextProvider';
 import axiosClient from '../axios-client';
+import {useNavigate} from "react-router-dom";
 
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
+  const navigate = useNavigate()
 
-  const {setUser, setToken} = useStateContext();
+  const {user,setUser, setToken} = useStateContext();
 
   const onSubmit = (e) => {
 
@@ -22,10 +24,14 @@ export default function Login() {
       .then(({data}) => {
         setUser(data.user);
         setToken(data.token);
+
+        navigate("/user");
       }).catch(err => {
         console.log(err);
       })
   }
+
+console.log(user);
 
   return (
 

@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axiosClient from '../axios-client';
+import { useStateContext } from '../context/ContextProvider';
 
 export default function User() {
+
+    const {user} = useStateContext();
+
+
   return (
     <>
     <div className='flex justify-center gap-80 mt-7'>
@@ -9,49 +15,46 @@ export default function User() {
             <img src="./src/assets/img/user.jpg" alt="User profile pic" className='w-40 p-1 bg-slate-700 rounded-full' />
           </div>
           <div className='text-center mt-1 font-sans'>
-            Slobodan Skaric
+            { user.name }
           </div>
           <div className='mt-10'>
-            <div>Name:    Slobodan Skaric</div>
-            <p>Position: Developer</p>
-            <p>email: slobodan.skaric@gmail.com</p>
+            <div>Name: { user.name }</div>
+            <p>Position: { user.postion }</p>
+            <p>email: { user.email }</p>
             <p>mobile: 0605444756</p>
           </div>
       </div>
       <div className='flex w-80'>
         <div className='flex flex-col'>
           <div>
-            <p>Slobodan Skaric</p>
+            <p>{ user.name }</p>
             <hr/>
           </div>
           <div>
-            <p>Position: Developer</p>
+            <p>Position: { user.postion }</p>
             <hr/>
           </div>
           <div>
-            <p>Skills: PHP,JS,React,...</p>
+            <p>Skills: { user.skills }</p>
             <hr/>
           </div>
           <div>
-            <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-              Quasi, cum quis facere ullam quaerat perferendis voluptas tempora adipisci 
-              iusto nihil esse iste quo neque non saepe dicta at, reprehenderit nam?
+            <p>
+                Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem dolor. Animi officia, dicta consequuntur facilis quisquam sunt debitis optio, perferendis provident minima ea eum accusamus culpa, quod earum tempore.{ user.description }
             </p>
             <hr/>
           </div>
           <div>
             <p>
-              Projects: 
+              Projects:
               <ul>
-                <li>Project1</li>
-                <li>Project2</li>
-                <li>Project3</li>
+                <li>{ user.projects }</li>
               </ul>
             </p>
             <hr/>
           </div>
           <div>
-            <p>GitHub: <a href="https://github.com/SlobodanSkaric">GitHub</a></p>
+            <p>GitHub: <a href="https://github.com/SlobodanSkaric">{ user.github }</a></p>
           </div>
         </div>
       </div>
