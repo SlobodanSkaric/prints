@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->string("tickets_number");
+            $table->integer("348810");
+            $table->integer("327120");
+            $table->integer("521342");
+            $table->string("commnets")->nullable();
+            $table->string("description")->nullable();
+            $table->timestamp("exit")->nullable();
+            $table->foreignId("user_id")->constrained("users")->onDelete("cascade");
             $table->timestamps();
         });
     }
