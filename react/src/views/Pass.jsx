@@ -17,8 +17,6 @@ export default function Pass() {
 
     setShecked[index].checked = !setShecked[index].checked;
     setCheckedValue(setShecked);
-
-
   }
 
   const  onChangeQuoantity = (e,index) => {
@@ -33,8 +31,6 @@ export default function Pass() {
 
     const checkedItem = checkedValue.filter(item => item.checked === true);
 
-
-
     if(checkedItem.length > 0){
 
         const payload = {
@@ -47,7 +43,7 @@ export default function Pass() {
             payload[`pri_${item.value}`] = parseInt(item.quantity,10)
         })
 
-        console.log(payload);
+        
 
         axiosClient.post("/ticketsstore", payload)
             .then(({data}) => {
