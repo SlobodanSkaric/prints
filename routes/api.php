@@ -19,7 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->group(function(){
     Route::get("/user/{id}", [UserController::class, "show"]);
+
     Route::get("/tickets", [TicketsController::class, "index"]);
+    Route::post("/ticketsstore", [TicketsController::class, "store"]);
 });
 
 Route::post("/signup", [AuthController::class, "registration"]);
