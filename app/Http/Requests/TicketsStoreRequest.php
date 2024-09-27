@@ -22,7 +22,7 @@ class TicketsStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "tickets_number" => "required|string|max:55|unique:tickets,tickets_number",
+            "tickets_number" => "required|string|max:55",
             "pri_348810" => "integer",
             "pri_327120" => "integer",
             "pri_521342" => "integer",
