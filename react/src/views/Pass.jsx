@@ -43,7 +43,7 @@ export default function Pass() {
             payload[`pri_${item.value}`] = parseInt(item.quantity,10)
         })
 
-        
+
 
         axiosClient.post("/ticketsstore", payload)
             .then(({data}) => {
