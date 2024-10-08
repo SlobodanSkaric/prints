@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TicketsStoreRequest;
 use App\Models\Ticket;
+use Carbon\Carbon;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,7 +15,7 @@ class TicketsController extends Controller
     public function index(){
         $tickets = Ticket::with("user")->get();
 
-        return response()->json($tickets);
+        return response()->json($tickets,200);
     }
 
     public function store(TicketsStoreRequest $request){
@@ -44,5 +45,27 @@ class TicketsController extends Controller
         }
 
 
+    }
+
+    function getOne($id){
+        $tickets = Ticket::find($id);
+
+        return response()->json($tickets, 200);
+    }
+
+    function ticketsUpdate(Request $request,$id){
+        $tickets = Ticket::find($id);
+
+        if(!$tickets){
+            return response()->json(["messages" => "Tjis ticket not existes"], 404);
+        }
+
+        $tickets->exit = $request->input("exit");
+        $tickets->save();
+
+
+        $all = Ticket::with("user")->get();
+
+        return response()->json(["message" => "Ticket update", "tickets" =>  $all], 200);
     }
 }
