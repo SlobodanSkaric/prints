@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('passes', function (Blueprint $table) {
+        Schema::create('pri_models', function (Blueprint $table) {
             $table->id();
-            $table->string("tickets_numbers")->unique();
-            $table->foreignId("pass_id")->constrained("passes")->onDelete("cascade");
+            $table->integer("pri_348810")->unsigned();
+            $table->integer("pri_327120")->unsigned();
+            $table->integer("pri_521342")->unsigned();
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('passes');
+        Schema::dropIfExists('pri_models');
     }
 };
