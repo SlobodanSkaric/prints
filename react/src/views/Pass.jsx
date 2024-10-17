@@ -47,10 +47,13 @@ export default function Pass() {
 
         axiosClient.post("/ticketsstore", payload)
             .then(({data}) => {
+              console.log(data);
                 setMesages(data.message);
                 setTimeout(() => {
                     setMesages();
                 },3000)
+            }).catch(err => {
+              setMesages("Nalog vec postoji");//Promenti boji pozadine
             })
     }
   }
