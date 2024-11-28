@@ -9,6 +9,7 @@ export default function Pass() {
   ]);
   const ticketNumber = useRef();
   const [messages, setMesages] = useState();
+  const [checkedMessage, setCheckedMessage] = useState(false);
 
 
 
@@ -48,12 +49,16 @@ export default function Pass() {
         axiosClient.post("/ticketsstore", payload)
             .then(({data}) => {
               console.log(data);
-                setMesages(data.message);
+                if(data.message){
+                  setMesages("Nalog je uspesno dodat!");
+                }
+                
                 setTimeout(() => {
                     setMesages();
                 },3000)
             }).catch(err => {
               setMesages("Nalog vec postoji");//Promenti boji pozadine
+              setCheckedMessage(true);
             })
     }
   }
@@ -99,7 +104,7 @@ export default function Pass() {
             </form>
             <div className='text-center'>
                 {messages && (
-                    <div className='p-3 bg-green-700 text-white'>{messages}</div>
+                    <div className={`p-3 ${checkedMessage ? "bg-red-700" : "bg-green-700"} text-white`}>{messages}</div>
                 )}
             </div>
           </div>

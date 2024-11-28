@@ -60,34 +60,55 @@ export default function Tickets() {
 
         <div className='flex text-center justify-around'>
         {pannel && (
-                    <div className='flex px-80 bg-white absolute top-7   border-2 border-solid border-neutral-700 p-7'>
-                                    <div className='relative flex flex-col '>
-                                        <div className='flex justify-between'>
+                    <div className='flex px-80 bg-white absolute top-7   border-2 border-solid border-neutral-700 p-7 '>
+                                    <div className='relative flex flex-col'>
+                                        <div className='flex justify-around border-b-2  border-solid border-neutral-700 py-7'>
                                             Detalji naloga {onetickets.tickets_number}
-                                            <div><input type="checkbox" onClick={(e) => setCheckboxTickets(e.target.checked)}/></div>
+                                                <input type="checkbox" onClick={(e) => setCheckboxTickets(e.target.checked)}/>
                                         </div>
-                                       <hr className='border border-t-2 border-neutral-700 my-7' />
-                                       <div className='flex flex-col items-start'>
-                                            <div>348810 - {onetickets.pri_348810 ? onetickets.pri_348810 : 0}</div>
-                                            <div>327120 - {onetickets.pri_327120 ? onetickets.pri_327120 : 0}</div>
-                                            <div>521342 - {onetickets.pri_521342 ? onetickets.pri_521342 : 0}</div>
-                                       </div>
-                                       <hr className='border border-t-2 border-neutral-700 my-7' />
-                                       <div>
-                                            <div>Comments</div>
+                                       <div className=' items-start border-b-2  border-solid border-neutral-700 py-7'>
                                             <div>
-                                                {onetickets.commnets}
+                                                <div className='pb-2'>Materijal</div>
+                                                <table className='w-full'>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Sifra</td>
+                                                            <td>Kolicina</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>348810</td>
+                                                            <td>{onetickets.pri_348810 ? onetickets.pri_348810 : 0}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>327120</td>
+                                                            <td>{onetickets.pri_327120 ? onetickets.pri_327120 : 0}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>521342</td>
+                                                            <td>{onetickets.pri_521342 ? onetickets.pri_521342 : 0}</td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
                                             </div>
                                        </div>
-                                       <hr className='border border-t-2 border-neutral-700 my-7' />
-                                       <div>
-                                            <div>Descriptions</div>
-                                            <div>
-                                                {onetickets.description}
-                                            </div>
+                                       <div className='border-b-2  border-solid border-neutral-700 '>
+                                            <div className=''>
+                                                <div className='py-2'>Comments</div>
+                                                <div className='py-5'>
+                                                    {onetickets.commnets}
+                                                </div>
+                                            </div>                                            
                                        </div>
-                                       <hr className='border border-t-2 border-neutral-700 my-7' />
-                                       <div className='flex '>
+                                       <div>
+                                            <div className='border-b-2  border-solid border-neutral-700 whitespace-normal'>
+                                                <div className='py-2 whitespace-normal'>Descriptions</div>
+                                                <div className='py-5'>
+                                                    {onetickets.description}
+                                                </div>
+                                            </div>                                            
+                                       </div>
+                                       <div className='flex py-2'>
                                             <button onClick={() => updateTickets(onetickets.id)} className='hover:bg-green-700 hover:text-slate-100 text-slate-700 border-2 py-3 px-7'>Sacuvaj</button>
                                             <button onClick={closeDialog} className='hover:bg-green-700 hover:text-slate-100 text-slate-700 border-2 py-3 px-7'>Zatvori</button>
                                         </div>
@@ -128,11 +149,6 @@ export default function Tickets() {
 
 
             </div>
-            <div className='p-3 text-2xl'>
-                    <div>
-                        Spisak materijala
-                    </div>
-                </div>
         </div>
     </div>
   )
