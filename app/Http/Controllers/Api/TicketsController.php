@@ -88,12 +88,19 @@ class TicketsController extends Controller
         if(!$tickets){
             return response()->json(["messages" => "Tjis ticket not existes"], 404);
         }
+        
+        $all = Ticket::with("user")->get();
+        
+        
+        if($tickets->exit){
+            return response()->json(["messages" => "This ticket is passed",  "tickets" =>  $all],200);
+        }
 
         $tickets->exit = $request->input("exit");
         $tickets->save();
 
 
-        $all = Ticket::with("user")->get();
+       
 
         return response()->json(["message" => "Ticket update", "tickets" =>  $all], 200);
     }
