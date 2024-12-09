@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\LoginLogController;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegistrationRequest;
 use App\Models\User;
@@ -19,11 +20,13 @@ class AuthController extends Controller
                 "message" => "Provided email or password is not valid"
             ], 422);
         }
-
+        
         $user = Auth::user();
-
+        
         $token = $user->createToken("main")->plainTextToken;
-
+        $log = LoginLogController::loginLog($request);
+        if($log === false) return response(["messages" => "Bad log"], 401);
+        
         return response(compact("user", "token"));
     }
 

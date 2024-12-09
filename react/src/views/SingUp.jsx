@@ -7,6 +7,7 @@ export default function SingUp() {
   const emailRef            = useRef();
   const passwordRef         = useRef();
   const confirmePassworRef  = useRef();
+  const profilePictures     = useRef();
 
   const {setUser, setToken} = useStateContext();
 
@@ -55,6 +56,10 @@ export default function SingUp() {
                 <div className="flex flex-col text-center p-3">
                   <label htmlFor="passwordc" className="py-3 font-bold font-sans text-lg">Password Confirme</label>
                   <input ref={confirmePassworRef} type="password" id="passwordc" placeholder="Please enter confirme password" className="border border-solid border-neutral-700 rounded-lg px-1 h-12" />
+                </div>
+                <div className="flex flex-col text-center items-center p-3">
+                  <label htmlFor="email" className="py-3 font-bold font-sans text-lg">Profile Pictures</label>
+                  <input ref={profilePictures} type="file" accept='image/' id="email" placeholder="Please enter your email" className="border border-solid border-neutral-700 rounded-full  " />
                 </div>
                 <div className="flex flex-col text-center p-3 my-3">
                   <button className="bg-slate-700 text-white py-3 rounded-xl">SignUp</button>
