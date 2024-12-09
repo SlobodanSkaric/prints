@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import axiosClient from '../axios-client';
 import { useStateContext } from '../context/ContextProvider';
+import { useQuery } from '@tanstack/react-query';
 
 export default function User() {
 
-    const {user} = useStateContext();
+  const {user} = useStateContext();
+  
+
+  const userData = JSON.parse(localStorage.getItem("USER_DATA"));
+  
 
 
   return (
@@ -15,32 +20,32 @@ export default function User() {
             <img src="./src/assets/img/user.jpg" alt="User profile pic" className='w-40 p-1 bg-slate-700 rounded-full' />
           </div>
           <div className='text-center mt-1 font-sans'>
-            { user.name }
+            { userData.name }
           </div>
           <div className='mt-10'>
-            <div>Name: { user.name }</div>
-            <p>Position: { user.postion }</p>
-            <p>email: { user.email }</p>
+            <div>Name: { userData.name }</div>
+            <p>Position: { userData.postion }</p>
+            <p>email: { userData.email }</p>
             <p>mobile: 0605444756</p>
           </div>
       </div>
       <div className='flex w-80'>
         <div className='flex flex-col'>
           <div>
-            <p>{ user.name }</p>
+            <p>{ userData.name }</p>
             <hr/>
           </div>
           <div>
-            <p>Position: { user.postion }</p>
+            <p>Position: { userData.postion }</p>
             <hr/>
           </div>
           <div>
-            <p>Skills: { user.skills }</p>
+            <p>Skills: { userData.skills }</p>
             <hr/>
           </div>
           <div>
             <p>
-                Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem dolor. Animi officia, dicta consequuntur facilis quisquam sunt debitis optio, perferendis provident minima ea eum accusamus culpa, quod earum tempore.{ user.description }
+              { userData.description }
             </p>
             <hr/>
           </div>
@@ -48,13 +53,13 @@ export default function User() {
             <p>
               Projects:
               <ul>
-                <li>{ user.projects }</li>
+                <li>{ userData.projects }</li>
               </ul>
             </p>
             <hr/>
           </div>
           <div>
-            <p>GitHub: <a href="https://github.com/SlobodanSkaric">{ user.github }</a></p>
+            <p>GitHub: <a href="https://github.com/SlobodanSkaric">{ userData.github }</a></p>
           </div>
         </div>
       </div>

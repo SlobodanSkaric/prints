@@ -8,7 +8,7 @@ export default function Login() {
   const passwordRef = useRef();
   const navigate = useNavigate()
 
-  const {user,setUser, setToken} = useStateContext();
+  const {user,setUserData, setToken} = useStateContext();
 
   const onSubmit = (e) => {
 
@@ -22,7 +22,8 @@ export default function Login() {
 
     axiosClient.post("/login", payload)
       .then(({data}) => {
-        setUser(data.user);
+        console.log(data);
+        setUserData(JSON.stringify(data.user));
         setToken(data.token);
 
         navigate("/user");
