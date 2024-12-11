@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import axiosClient from '../axios-client';
 import { useStateContext } from '../context/ContextProvider';
 
@@ -7,19 +7,27 @@ export default function SingUp() {
   const emailRef            = useRef();
   const passwordRef         = useRef();
   const confirmePassworRef  = useRef();
-  const profilePictures     = useRef();
+  const [profileImages, setProfileImages]     = useState(null);
 
   const {setUser, setToken} = useStateContext();
+
+
+  const hendleFileChange = (e) =>{
+    const file = e.target.files[0];
+    setProfileImages(file);
+  }
 
   const onSubmit = (e) =>{
 
     e.preventDefault();
+    
 
     const payload = {
       name: nameRef.current.value,
       email: emailRef.current.value,
       password: passwordRef.current.value,
-      password_confirmation: confirmePassworRef.current.value
+      password_confirmation: confirmePassworRef.current.value,
+      profile_images:profileImages
     }
 
     console.log(payload);
@@ -30,7 +38,7 @@ export default function SingUp() {
         setToken(data.token);
       }).catch(err => {
         console.log("Error code" +err);
-      })
+      });
   }
   return (
     <div className="flex justify-center py-3">
@@ -59,7 +67,7 @@ export default function SingUp() {
                 </div>
                 <div className="flex flex-col text-center items-center p-3">
                   <label htmlFor="email" className="py-3 font-bold font-sans text-lg">Profile Pictures</label>
-                  <input ref={profilePictures} type="file" accept='image/' id="email" placeholder="Please enter your email" className="border border-solid border-neutral-700 rounded-full  " />
+                  <input onChange={hendleFileChange} type="file" accept='image/' id="email" placeholder="Please enter your email" className="border border-solid border-neutral-700 rounded-full  " />
                 </div>
                 <div className="flex flex-col text-center p-3 my-3">
                   <button className="bg-slate-700 text-white py-3 rounded-xl">SignUp</button>

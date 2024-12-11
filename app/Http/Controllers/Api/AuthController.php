@@ -33,10 +33,15 @@ class AuthController extends Controller
     public function registration(RegistrationRequest $request){
         $credencials = $request->validated();
 
+        if($credencials["profile_images"]){
+            $path = $credencials["profile_images"]->store("profile_images", "public");
+        }
+
         $user = User::create([
             "name" => $credencials["name"],
             "email" => $credencials["email"],
-            "password" => bcrypt($credencials["password"])
+            "password" => bcrypt($credencials["password"]),
+            "profile_images" => $path
         ]);
 
         $token = $user->createToken("main")->plainTextToken;

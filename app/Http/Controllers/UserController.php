@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -68,5 +70,23 @@ class UserController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function addProfilePicture(Request $request){
+
+        $request->validate(["profile_images" => "required|image|mimes:jpeg,png,jpg,gif"]);
+
+        $user = Auth::user();
+
+        if($user->profile_images){
+            Storage::delete($user->profile_images);
+        }
+
+        $path = $request->file("profile_images")->store("profile_images", "public");
+
+        $user->profile_images = $path;
+        $user->save();
+
+        return response()->json(["messages" => "Pictures add success"], 200);
     }
 }

@@ -17,6 +17,9 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+
+     
     protected $fillable = [
         'name',
         'email',
@@ -25,7 +28,8 @@ class User extends Authenticatable
         "skills",
         "description",
         "projects",
-        "github"
+        "github",
+        "profile_images"
     ];
 
     /**
