@@ -65,7 +65,7 @@ export default function User() {
       </div>
     </div>
     <div className='flex justify-center mt-28'>
-     <button className='border-2 py-3 px-7 hover:bg-slate-300 hover:text-slate-100  text-slate-700 rounded-xl'>Edit</button>
+     <button className='border-2 py-3 px-7 hover:bg-slate-300 hover:text-slate-100  text-slate-700 rounded-xl'><a href="/usersedit">Edit</a></button>
     </div>
    </>
   )
