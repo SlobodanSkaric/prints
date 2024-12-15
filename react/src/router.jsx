@@ -8,6 +8,7 @@ import SingUp from "./views/SingUp";
 import Tickets from "./views/Tickets";
 import History from "./views/History";
 import Pass from "./views/Pass";
+import UsersEdit from "./views/UsersEdit";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path:"/pass",
                 element: <Pass/>
+            },
+            {
+                path:"/usersedit",
+                element: <UsersEdit/>
             }
         ]
     },
