@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateUsersRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -59,9 +60,30 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateUsersRequest $request, string $id)
     {
-        //
+        $credencilas = $request->validated();
+
+        $users = User::findOrFail($id);
+
+        $users->name = $credencilas["name"];
+        $users->email = $credencilas["email"];
+        if(isset($credencilas["password"])){
+            $users->password = $credencilas["password"];
+        }
+
+        if(isset($credencilas["profile_images"])){
+            Storage::delete($users->profile_images);
+
+            $path = $credencilas["profile_images"]->store("profile_images", "public");
+            $users->profile_images = $path;
+        }
+
+        $users->save();
+
+        return response()->json($users, 200);
+        
+
     }
 
     /**

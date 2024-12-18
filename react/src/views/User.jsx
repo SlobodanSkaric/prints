@@ -7,6 +7,7 @@ export default function User() {
 
   const {user} = useStateContext();
   
+  
 
   const userData = JSON.parse(localStorage.getItem("USER_DATA"));
   
@@ -17,7 +18,7 @@ export default function User() {
     <div className='flex justify-center gap-80 mt-7'>
       <div className='flex flex-col justify-center '>
           <div className='flex justify-center'>
-            <img src="./src/assets/img/user.jpg" alt="User profile pic" className='w-40 p-1 bg-slate-700 rounded-full' />
+            <img src={`http://localhost:8000/storage/${userData.profile_images}`} alt="User profile pic" className='w-36 h-36 p-1 bg-slate-700 rounded-full' />
           </div>
           <div className='text-center mt-1 font-sans'>
             { userData.name }

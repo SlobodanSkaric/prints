@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 
 const StateContext = createContext({
@@ -33,6 +33,12 @@ export const ContextProvider = ({children}) => {
             localStorage.removeItem("USER_DATA");
         }
     }
+
+    useEffect(() => {
+        if(user){
+            localStorage.setItem("USER_DATA", user);
+        }
+    },[user]);
 
 
     return (

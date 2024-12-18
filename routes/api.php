@@ -18,6 +18,9 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post("/pristore", [PriCotroller::class, "update"]);
 
     Route::post("/users/addprofilepictures", [UserController::class, "addProfilePicture"]);
+
+    Route::get("/user/getinfo/{id}", [UserController::class, "show"]);
+    Route::post("/user/update/{id}", [UserController::class, "update"]);
 });
 
 Route::post("/signup", [AuthController::class, "registration"]);
