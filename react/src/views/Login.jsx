@@ -22,8 +22,8 @@ export default function Login() {
 
     axiosClient.post("/login", payload)
       .then(({data}) => {
-        console.log(data);
-        setUserData(JSON.stringify(data.user));
+        //console.log(data.user);
+        localStorage.setItem("USER_DATA", JSON.stringify(data.user));
         setToken(data.token);
 
         navigate("/user");

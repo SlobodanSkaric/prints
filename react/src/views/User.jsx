@@ -10,7 +10,6 @@ export default function User() {
   
 
   const userData = JSON.parse(localStorage.getItem("USER_DATA"));
-  
 
 
   return (

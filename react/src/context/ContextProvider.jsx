@@ -25,7 +25,7 @@ export const ContextProvider = ({children}) => {
     }
 
     const setUserData = (userData) => {
-        setUser(JSON.parse(userData));
+        setUser(userData);
 
         if(userData){
             localStorage.setItem("USER_DATA", userData);
